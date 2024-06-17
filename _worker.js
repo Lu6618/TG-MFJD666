@@ -11,7 +11,8 @@ let total = 99;//TB
 let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
-let MainData = ``
+let MainData = `vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjIwNTIiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666
+vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjIwODIiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666`
 
 let urls = [];
 let subconverter = "apiurl.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
