@@ -12,7 +12,42 @@ let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
 let MainData = `
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU5OTk5XHU2ZTJmVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjgwIiwgImlkIjogIjIzNWIzZmVhLTI1MjEtNDFmMi04ZTZiLWQxMTA5NGFhYThlOCIsICJhaWQiOiAiMCIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAieGlhbmdnYW5nLm1vamMueHl6IiwgInBhdGgiOiAiLz9lZD0yMDQ4IiwgInRscyI6ICIifQ#本订阅由TG@MFJD666提供
+
+`
+
+let urls = [];
+let subconverter = "apiurl.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
+
+export default {
+	async fetch (request,env) {
+		const userAgentHeader = request.headers.get('User-Agent');
+		const userAgent = userAgentHeader ? userAgentHeader.toLowerCase() : "null";
+		const url = new URL(request.url);
+		const token = url.searchParams.get('token');
+		mytoken = env.TOKEN || mytoken;
+		BotToken = env.TGTOKEN || BotToken;
+		ChatID = env.TGID || ChatID; 
+		TG =  env.TG || TG; 
+		subconverter = env.SUBAPI || subconverter;
+		subconfig = env.SUBCONFIG || subconfig;
+		FileName = env.SUBNAME || FileName;
+		MainData = env.LINK || MainData;
+		if(env.LINKSUB) urls = await ADD(env.LINKSUB);
+
+		const currentDate = new Date();
+		currentDate.setHours(0, 0, 0, 0); 
+		const timeTemp = Math.ceil(currentDate.getTime() / 1000);
+		const fakeToken = await MD5MD5(`${mytoken}${timeTemp}`);
+		//console.log(`${fakeUserID}\n${fakeHostName}`); // 打印fakeID
+
+		let UD = Math.floor(((timestamp - Date.now())/timestamp * total * 1099511627776 )/2);
+		total = total * 1099511627776 ;
+		let expire= Math.floor(timestamp / 1000) ;
+		SUBUpdateTime = env.SUBUPTIME || SUBUpdateTime;
+
+		let 重新汇总所有链接 = await ADD(MainData + '\n' + urls.join('\n'));
+		let 自建节点 ="vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU5OTk5XHU2ZTJmVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjgwIiwgImlkIjogIjIzNWIzZmVhLTI1MjEtNDFmMi04ZTZiLWQxMTA5NGFhYThlOCIsICJhaWQiOiAiMCIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAieGlhbmdnYW5nLm1vamMueHl6IiwgInBhdGgiOiAiLz9lZD0yMDQ4IiwgInRscyI6ICIifQ#本订阅由TG@MFJD666提供
 vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU5OTk5XHU2ZTJmVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjgwODAiLCAiaWQiOiAiMjM1YjNmZWEtMjUyMS00MWYyLThlNmItZDExMDk0YWFhOGU4IiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJ4aWFuZ2dhbmcubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#加入TG频道获取更多免费资源
 vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU5OTk5XHU2ZTJmVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjg4ODAiLCAiaWQiOiAiMjM1YjNmZWEtMjUyMS00MWYyLThlNmItZDExMDk0YWFhOGU4IiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJ4aWFuZ2dhbmcubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#香港TG@MFJD666
 vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU5OTk5XHU2ZTJmVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjIwNTIiLCAiaWQiOiAiMjM1YjNmZWEtMjUyMS00MWYyLThlNmItZDExMDk0YWFhOGU4IiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJ4aWFuZ2dhbmcubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#香港TG@MFJD666
@@ -219,42 +254,7 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFv
 vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjgwODAiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666
 vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjg4ODAiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666
 vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjIwNTIiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjIwODIiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666
-`
-
-let urls = [];
-let subconverter = "apiurl.v1.mk"; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
-
-export default {
-	async fetch (request,env) {
-		const userAgentHeader = request.headers.get('User-Agent');
-		const userAgent = userAgentHeader ? userAgentHeader.toLowerCase() : "null";
-		const url = new URL(request.url);
-		const token = url.searchParams.get('token');
-		mytoken = env.TOKEN || mytoken;
-		BotToken = env.TGTOKEN || BotToken;
-		ChatID = env.TGID || ChatID; 
-		TG =  env.TG || TG; 
-		subconverter = env.SUBAPI || subconverter;
-		subconfig = env.SUBCONFIG || subconfig;
-		FileName = env.SUBNAME || FileName;
-		MainData = env.LINK || MainData;
-		if(env.LINKSUB) urls = await ADD(env.LINKSUB);
-
-		const currentDate = new Date();
-		currentDate.setHours(0, 0, 0, 0); 
-		const timeTemp = Math.ceil(currentDate.getTime() / 1000);
-		const fakeToken = await MD5MD5(`${mytoken}${timeTemp}`);
-		//console.log(`${fakeUserID}\n${fakeHostName}`); // 打印fakeID
-
-		let UD = Math.floor(((timestamp - Date.now())/timestamp * total * 1099511627776 )/2);
-		total = total * 1099511627776 ;
-		let expire= Math.floor(timestamp / 1000) ;
-		SUBUpdateTime = env.SUBUPTIME || SUBUpdateTime;
-
-		let 重新汇总所有链接 = await ADD(MainData + '\n' + urls.join('\n'));
-		let 自建节点 ="";
+vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkVEdATUZKRDY2NiIsICJhZGQiOiAiYmFvYmFvamljaGFuZy5iYmpjLnh5eiIsICJwb3J0IjogIjIwODIiLCAiaWQiOiAiM2ZjMTQ3YTctYzQxMi00MmRmLWE1NDMtYzVjZGJiODdkZjNiIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICJtZWlndW8ubW9qYy54eXoiLCAicGF0aCI6ICIvP2VkPTIwNDgiLCAidGxzIjogIiJ9#美国TG@MFJD666";
 		let 订阅链接 ="";
 		for (let x of 重新汇总所有链接) {
 			if (x.toLowerCase().startsWith('http')) {
