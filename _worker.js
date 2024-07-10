@@ -1,30 +1,10 @@
-// 添加爬虫 User-Agent 判断和重定向逻辑
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
-
-async function handleRequest(request) {
-  const userAgent = request.headers.get('User-Agent')
-
-  // 定义需要重定向的爬虫 User-Agent 列表
-  const redirectUserAgents = ['TelegramBot', 'Twitterbot', 'Discordbot', 'Slackbot']
-
-  // 检查 User-Agent 是否在需要重定向的列表中
-  if (redirectUserAgents.some(ua => userAgent.includes(ua))) {
-    return Response.redirect('https://t.me/MFJD666', 301)
-  }
-
-  // 如果不是需要重定向的爬虫 User-Agent，则将请求传递给原始服务器
-  return fetch(request)
-}
-
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
 let mytoken = ''; //可以随便取，或者uuid生成，https://1024tools.com/uuid
 let BotToken =''; //可以为空，或者@BotFather中输入/start，/newbot，并关注机器人
 let ChatID =''; //可以为空，或者@userinfobot中获取，/start
 let TG = 0; //小白勿动， 开发者专用，1 为推送所有的访问信息，0 为不推送订阅转换后端的访问信息与异常访问
-let FileName = 'CF-Workers-SUB';
+let FileName = '冠希公益机场';
 let SUBUpdateTime = 6; //自定义订阅更新时间，单位小时
 let total = 99;//TB
 let timestamp = 4102329600000;//2099-12-31
@@ -372,4 +352,24 @@ function clashFix(content) {
 		content = result;
 	}
 	return content;
+}
+
+// 添加爬虫 User-Agent 判断和重定向逻辑
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  const userAgent = request.headers.get('User-Agent')
+
+  // 定义需要重定向的爬虫 User-Agent 列表
+  const redirectUserAgents = ['TelegramBot', 'Twitterbot', 'Discordbot', 'Slackbot']
+
+  // 检查 User-Agent 是否在需要重定向的列表中
+  if (redirectUserAgents.some(ua => userAgent.includes(ua))) {
+    return Response.redirect('https://t.me/MFJD666', 301)
+  }
+
+  // 如果不是需要重定向的爬虫 User-Agent，则将请求传递给原始服务器
+  return fetch(request)
 }
