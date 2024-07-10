@@ -71,8 +71,8 @@ export default {
 
 		let UD = Math.floor(((timestamp - Date.now())/timestamp * total * 1099511627776 )/2);
 		total = total * 1099511627776 ;
-		UD = 1024;//就是上传下载都跑了1024字节
-       total = 108842083628544;//就是总流量大小是2048字节
+		UD = 102400;//就是上传下载都跑了1024字节
+       total = 108890104436224;//就是总流量大小是2048字节
 		let expire= Math.floor(timestamp / 1000) ;
 		SUBUpdateTime = env.SUBUPTIME || SUBUpdateTime;
 
