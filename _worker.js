@@ -11,6 +11,22 @@ let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
 let MainData = `
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk1.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.6df03129.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk2.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.24ba0f77.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk3.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.0d1f6a51.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk4.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.66dc3db5.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk5.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.52629f87.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk6.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.7817bed2.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk7.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.8fb10e3d.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@hk8.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.b12b4427.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇭🇰香港IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us1.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.36a8c922.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us2.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.2f6cd430.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us3.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.47253001.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us4.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.30d6a0d0.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us5.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.6fe0e22c.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us6.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.617e6ac3.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us7.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.85860b8f.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
+trojan://ab4bdba2-8653-4708-9162-c5c7ab04f567@us8.ce8a8dc2-008f-5ee5-1cc8-50d5c2e7291d.f73b4cdf.the-best-airport.com:443?allowInsecure=1&peer=new.download.the-best-airport.com&sni=new.download.the-best-airport.com&type=tcp#🇺🇸美国IPLC砖线
 
 `
 
