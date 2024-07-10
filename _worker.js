@@ -12,8 +12,29 @@ let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
 let MainData = `
-vless://b7a392e2-4ef0-4496-90bc-1c37bb234904@cf.090227.xyz:443?encryption=none&security=tls&sni=edgetunnel-2z2.pages.dev&fp=random&type=ws&host=edgetunnel-2z2.pages.dev&path=%2F%3Fed%3D2048#%E5%8A%A0%E5%85%A5%E6%88%91%E7%9A%84%E9%A2%91%E9%81%93t.me%2FCMLiussss%E8%A7%A3%E9%94%81%E6%9B%B4%E5%A4%9A%E4%BC%98%E9%80%89%E8%8A%82%E7%82%B9
-https://sub.xf.free.hr/auto
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@34.216.37.235:80/?plugin=none;obfs=plain;proto=origin;udp=1#TG%E9%A2%91%E9%81%93%40MFJD666
+ss://YWVzLTI1Ni1nY206YzFmOGU2OTdiYjcxNWE4OQ==@46.29.162.155:65142#%E6%96%B0%E5%8A%A0%E5%9D%A1
+ss://YWVzLTI1Ni1nY206YTEwMjk1NTY3MTY5NTNhOQ==@46.17.43.226:65120#%E6%97%A5%E6%9C%AC
+ss://YWVzLTI1Ni1nY206YTBlMzNjMTAyMTc5YzBiMg==@212.192.15.181:65123#%E9%A6%99%E6%B8%AF
+ss://YWVzLTI1Ni1nY206NmY0NGRkNWQzOWQ3MTMyMw==@185.22.155.124:61431#%E7%BE%8E%E5%9B%BD
+ss://YWVzLTI1Ni1nY206ZjM5OTQwNjk0NzUyOWM4ZA==@45.130.147.202:65124#%E5%8F%B0%E6%B9%BE
+ss://YWVzLTI1Ni1nY206YTBkYWYwZTMzNDI5ZmUzZg==@85.117.234.80:65421#%E9%9F%A9%E5%9B%BD
+ss://YWVzLTI1Ni1nY206ZDY1MzFjNGMzZDgzOGNiMA==@46.29.162.58:65123#%E5%8A%A0%E6%8B%BF%E5%A4%A7
+ss://YWVzLTI1Ni1nY206OTJjMDdkOGRjYmM4NGQ5ZA==@45.130.146.201:65123#%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A
+ss://YWVzLTI1Ni1nY206YWZlOTZjNzViMTA2MWI3Mg==@185.22.155.70:65219#%E6%B3%95%E5%9B%BD
+ss://YWVzLTI1Ni1nY206YTZmZDAxMTZiMWJkZmNjNw==@85.117.235.107:65123#%E6%B3%95%E5%9B%BD
+ss://YWVzLTI1Ni1nY206YTZmZDAxMTZiMWJkZmNjNw==@85.117.235.107:65123#%E8%8B%B1%E5%9B%BD
+ss://YWVzLTI1Ni1nY206MWY1YTU3ZDhhNTFkNjQ0NQ==@195.133.52.59:65123#%E8%A5%BF%E7%8F%AD%E7%89%99
+ss://YWVzLTI1Ni1nY206YWZlOTZjNzViMTA2MWI3Mg==@185.22.155.70:65219#%E6%B3%B0%E5%9B%BD
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@13.125.231.16:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28SG%2C%20Singapore%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@3.0.103.193:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28JP%2C%20Tokyo%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@122.248.226.68:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28JP%2C%20Osaka%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@13.125.132.18:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28TW%2C%20Taipei%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@47.129.42.209:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28KR%2C%20Incheon%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@3.38.179.87:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28HK%2C%20Kowloon%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@35.87.29.150:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28CA%2C%20Vancouver%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@52.13.11.118:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28US%2C%20California%29
+ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU=@35.161.217.82:80/?plugin=none;obfs=plain;proto=origin;udp=1#VIP%28US%2C%20Houston%29
 `
 
 let urls = [];
