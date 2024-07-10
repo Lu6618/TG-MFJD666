@@ -1,16 +1,20 @@
+// 添加爬虫 User-Agent 判断和重定向逻辑
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
 
 async function handleRequest(request) {
   const userAgent = request.headers.get('User-Agent')
-  const redirectUserAgents = ['Telegram', 'Twitterbot', 'Discord', 'Slack']
 
+  // 定义需要重定向的爬虫 User-Agent 列表
+  const redirectUserAgents = ['TelegramBot', 'Twitterbot', 'Discordbot', 'Slackbot']
+
+  // 检查 User-Agent 是否在需要重定向的列表中
   if (redirectUserAgents.some(ua => userAgent.includes(ua))) {
     return Response.redirect('https://t.me/MFJD666', 301)
   }
 
-  // 如果不需要重定向，直接将请求传递给原始服务器
+  // 如果不是需要重定向的爬虫 User-Agent，则将请求传递给原始服务器
   return fetch(request)
 }
 
