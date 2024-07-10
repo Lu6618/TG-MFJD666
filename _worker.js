@@ -1,3 +1,18 @@
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  const userAgent = request.headers.get('User-Agent')
+  const redirectUserAgents = ['Telegram', 'Twitterbot', 'Discord', 'Slack']
+
+  if (redirectUserAgents.some(ua => userAgent.includes(ua))) {
+    return Response.redirect('https://t.me/MFJD666', 301)
+  }
+
+  // 如果不需要重定向，直接将请求传递给原始服务器
+  return fetch(request)
+}
 
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
