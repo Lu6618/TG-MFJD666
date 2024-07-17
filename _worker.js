@@ -6,7 +6,7 @@ let ChatID =''; //可以为空，或者@userinfobot中获取，/start
 let TG = 1; //小白勿动， 开发者专用，1 为推送所有的访问信息，0 为不推送订阅转换后端的访问信息与异常访问
 let FileName = '%E5%86%A0%E5%B8%8C%E4%BA%91TG%E9%A2%91%E9%81%93%40MFJD666';
 let SUBUpdateTime = 6; //自定义订阅更新时间，单位小时
-let total = 99;//TB
+let total = 999;//TB
 let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
